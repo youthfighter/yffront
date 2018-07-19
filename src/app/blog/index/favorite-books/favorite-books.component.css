@@ -1,0 +1,43 @@
+ul {
+    padding: 16px 0;
+    overflow: hidden;
+}
+li {
+    float: left;
+    width: 33.33%;
+}
+.card {
+    width: 330px;
+    padding: 16px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 14px;
+}
+.inner-card {
+    margin: 0 auto;
+    text-align: center;
+    background: rgb(236, 236, 236);
+}
+img {
+    width: 100%;
+    height: auto;
+}
+.title {
+    margin-top: 10px;
+    font-size: 14px;
+    text-shadow: #fff 1px 1px 0;
+    line-height: 26px;
+    text-align: center;
+    font-weight: 700;
+    color: #226039;
+}
+.content {
+    padding: 10px;
+    height: 100px;
+    overflow: hidden;
+    line-height: 22px;
+    color: #666;
+    word-break: break-all;
+    text-align: left;
+}

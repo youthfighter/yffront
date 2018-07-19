@@ -1,0 +1,21 @@
+.blog{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: url(/assets/top.jpg) no-repeat top #075498;
+}
+.w-1200{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.content{
+    overflow: hidden;
+    background: url(/assets/articlebg.png) repeat;
+}
+.inner-content{
+    margin: 20px;
+    background: url(/assets/articlebg.png) repeat;
+    box-shadow: 0 1px 10px #075498;
+}

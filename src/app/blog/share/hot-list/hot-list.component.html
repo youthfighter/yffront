@@ -1,0 +1,10 @@
+<section>
+  <header>
+    {{title}}
+  </header>
+  <ul>
+    <li *ngFor="let item of list">
+      <a routerLink="item.link">{{item.content}}</a>
+    </li>
+  </ul>
+</section>
