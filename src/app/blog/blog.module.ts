@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from 'src/app/blog/header/header.component';
 import { FooterComponent } from 'src/app/blog/footer/footer.component';
 import { BlogComponent } from 'src/app/blog/blog.component';
-import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { BlogRoutes } from 'src/app/blog/blog.routes';
 import { IndexComponent } from './index/index.component';
@@ -15,8 +14,7 @@ import { ArticlesComponent } from './articles/articles.component';
 @NgModule({
   imports: [
     CommonModule,
-    BrowserModule,    
-    RouterModule.forRoot(BlogRoutes),
+    RouterModule.forChild(BlogRoutes),
     IndexModule
   ],
   declarations: [

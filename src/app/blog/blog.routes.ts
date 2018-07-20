@@ -7,7 +7,7 @@ import { ArticlesComponent } from 'src/app/blog/articles/articles.component';
 
 export const BlogRoutes = [
     {
-        path: 'blog',
+        path: '',
         component: BlogComponent,
         children: [
             {
@@ -21,7 +21,7 @@ export const BlogRoutes = [
             {
                 path: 'article/:id',
                 component: DetailComponent
-            },
+            }
         ]
     }
 ]
