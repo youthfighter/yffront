@@ -4,7 +4,7 @@
     right: 0;
     top: 0;
     min-height: 100%;
-    background: url(/assets/top.jpg) no-repeat top #075498;
+    background: url(/assets/images/top.jpg) no-repeat top #075498;
 }
 .w-1200{
     width: 1200px;
@@ -13,10 +13,10 @@
 
 .content{
     overflow: hidden;
-    background: url(/assets/articlebg.png) repeat;
+    background: url(/assets/images/articlebg.png) repeat;
 }
 .inner-content{
     margin: 20px;
-    background: url(/assets/articlebg.png) repeat;
+    background: url(/assets/images/articlebg.png) repeat;
     box-shadow: 0 1px 10px #075498;
 }
