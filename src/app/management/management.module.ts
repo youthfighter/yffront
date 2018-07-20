@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { managementRoutes } from './management.routes';
 import { ManagementComponent } from './management.component';
+import { EditorComponent } from './share/editor/editor.component';
 
 @NgModule({
   imports: [
@@ -10,7 +11,8 @@ import { ManagementComponent } from './management.component';
     RouterModule.forChild(managementRoutes)
   ],
   declarations: [
-    ManagementComponent
+    ManagementComponent,
+    EditorComponent
   ],
   exports: [
   ]

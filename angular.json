@@ -23,19 +23,19 @@
               "src/assets"
             ],
             "styles": [
-              "assets/editormd/css/editormd.css",
+              "src/assets/editormd/css/editormd.css",
               "src/styles.css"
             ],
             "scripts": [
-              "../node_modules/jquery/dist/jquery.min.js",
-              "assets/editormd/editormd.min.js",
-              "assets/editormd/lib/marked.min.js",
-              "assets/editormd/lib/prettify.min.js",
-              "assets/editormd/lib/raphael.min.js",
-              "assets/editormd/lib/underscore.min.js",
-              "assets/editormd/lib/sequence-diagram.min.js",
-              "assets/editormd/lib/flowchart.min.js",
-              "assets/editormd/lib/jquery.flowchart.min.js"
+              "./node_modules/jquery/dist/jquery.min.js",
+              "src/assets/editormd/editormd.min.js",
+              "src/assets/editormd/lib/marked.min.js",
+              "src/assets/editormd/lib/prettify.min.js",
+              "src/assets/editormd/lib/raphael.min.js",
+              "src/assets/editormd/lib/underscore.min.js",
+              "src/assets/editormd/lib/sequence-diagram.min.js",
+              "src/assets/editormd/lib/flowchart.min.js",
+              "src/assets/editormd/lib/jquery.flowchart.min.js"
             ]
           },
           "configurations": {
