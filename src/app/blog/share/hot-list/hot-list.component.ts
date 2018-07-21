@@ -11,6 +11,8 @@ export class HotListComponent implements OnInit {
   title: string;
   @Input('list')
   list: { content: string, link: string }[]
+  @Input('iconClass')
+  iconClass: string
   constructor() { }
 
   ngOnInit() {

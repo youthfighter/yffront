@@ -1,0 +1,20 @@
+<!-- 简介 -->
+<a [routerLink]="['/blog/article', article.id]" class="header">
+  {{article.title}}
+</a>
+<div>
+  <div>
+    <span class="tag">
+        <i class="fa fa-clock-o" aria-hidden="true"></i>
+        发布时间：{{article.publishDate | date:'yyyy-MM-dd HH:mm:ss' }}
+    </span>
+    <div class="tag m-l-20">
+      <app-tags [tags]="article.tags"></app-tags>
+    </div>
+    <div class="content">
+        {{article.content}}
+    </div>
+  </div>
+  <div>
+  </div>
+</div>

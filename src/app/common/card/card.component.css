@@ -1,0 +1,12 @@
+.card {
+    background: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    position: relative;
+    transition: all .2s ease-in-out;
+    border: 1px solid #dddee1;
+    border-color: #e9eaec;  
+}
+.card-body{
+    padding: 16px;
+}

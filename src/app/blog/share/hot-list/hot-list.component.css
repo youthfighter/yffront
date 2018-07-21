@@ -1,0 +1,32 @@
+.card {
+    background: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    position: relative;
+    transition: all .2s ease-in-out;
+    border: 1px solid #dddee1;
+    border-color: #e9eaec;  
+}
+.card-body{
+    padding: 16px;
+}
+header{
+    color: #495060;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 0 16px 10px;
+    margin: 0 -16px 20px;
+    border-bottom: 1px solid rgb(237, 239, 241);
+}
+li{
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    height: 30px;
+    line-height: 30px;
+}
+a {
+    color:#2d8cf0
+}

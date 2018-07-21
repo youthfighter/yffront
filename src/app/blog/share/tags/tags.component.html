@@ -1,0 +1,7 @@
+<div *ngIf="tags" class="tags">
+    <i class="fa fa-tags" aria-hidden="true"></i>
+    标签：
+    <p-button [label]="tags[0]" *ngIf="tags[0]" (click)="tagSearch(tags[0])"></p-button>
+    <p-button [label]="tags[1]" *ngIf="tags[1]" styleClass="ui-button-success" (click)="tagSearch(tags[1])"></p-button>
+    <p-button [label]="tags[2]" *ngIf="tags[2]" styleClass="ui-button-danger" (click)="tagSearch(tags[2])"></p-button>
+</div>

@@ -1,3 +1,13 @@
-<p>
-  detail works!
-</p>
+<div class="ui-g">
+    <div class="ui-g-9">
+      <app-article [article]="article"></app-article>
+    </div>
+    <div class="ui-g-3">
+      <div>
+          <app-hot-list title="热门文章" iconClass="fa fa-paper-plane-o" [list]="hotList"></app-hot-list>
+      </div>
+      <div style="margin-top: 20px">
+          <app-hot-list title="最新文章" iconClass="fa fa-paper-plane-o" [list]="hotList"></app-hot-list>
+      </div>      
+    </div>
+</div>

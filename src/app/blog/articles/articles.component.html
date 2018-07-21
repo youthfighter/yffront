@@ -1,3 +1,27 @@
-<p>
-  articles works!
-</p>
+<div class="ui-g">
+    <div class="ui-g-9">
+        <div class="card">
+            <div class="card-body">
+              <header>
+                全部文章
+              </header>
+              <ul>
+                <li *ngFor="let article of articles">
+                  <app-synopsis [article]="article"></app-synopsis>
+                </li>
+              </ul>
+              <div class="paginator">
+                  <p-paginator [rows]="10" [totalRecords]="articles.length"></p-paginator>
+              </div>    
+            </div>
+          </div>
+    </div>
+    <div class="ui-g-3">
+      <div>
+          <app-hot-list title="热门文章" iconClass="fa fa-paper-plane-o" [list]="hotList"></app-hot-list>
+      </div>
+      <div style="margin-top: 20px">
+          <app-hot-list title="最新文章" iconClass="fa fa-paper-plane-o" [list]="hotList"></app-hot-list>
+      </div>      
+    </div>
+</div>

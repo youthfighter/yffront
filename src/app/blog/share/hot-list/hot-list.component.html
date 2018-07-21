@@ -1,10 +1,13 @@
-<section>
-  <header>
-    {{title}}
-  </header>
-  <ul>
-    <li *ngFor="let item of list">
-      <a routerLink="item.link">{{item.content}}</a>
-    </li>
-  </ul>
+<section class="card">
+  <div class="card-body">
+    <header>
+      <i [class]="iconClass" aria-hidden="true" *ngIf="iconClass"></i>  
+      {{title}}
+    </header>
+    <ul>
+      <li *ngFor="let item of list">
+        <a [routerLink]="['/blog/article', item.id]">{{item.title}}</a>
+      </li>
+    </ul>
+  </div>
 </section>

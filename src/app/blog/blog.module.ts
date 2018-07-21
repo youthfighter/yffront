@@ -10,12 +10,20 @@ import { DetailComponent } from './detail/detail.component';
 import { FavoriteBooksComponent } from './index/favorite-books/favorite-books.component';
 import { IndexModule } from 'src/app/blog/index/index.module';
 import { ArticlesComponent } from './articles/articles.component';
+import { SynopsisComponent } from './articles/synopsis/synopsis.component';
+import { ButtonModule } from 'primeng/button';
+import {PaginatorModule} from 'primeng/paginator';
+import { ShareModule } from './share/share.module';
+import { ArticleComponent } from './detail/article/article.component';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(BlogRoutes),
-    IndexModule
+    ButtonModule,
+    IndexModule,
+    PaginatorModule,
+    ShareModule
   ],
   declarations: [
     HeaderComponent,
@@ -23,6 +31,8 @@ import { ArticlesComponent } from './articles/articles.component';
     BlogComponent,
     DetailComponent,
     ArticlesComponent,
+    SynopsisComponent,
+    ArticleComponent
   ],
   exports: [
     BlogComponent
