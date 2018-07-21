@@ -11,7 +11,7 @@
                 </li>
               </ul>
               <div class="paginator">
-                  <p-paginator [rows]="10" [totalRecords]="articles.length"></p-paginator>
+                <p-paginator [rows]="5" [totalRecords]="articles.length" (onPageChange)="paginate($event)"></p-paginator>
               </div>    
             </div>
           </div>
