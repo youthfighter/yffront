@@ -1,0 +1,28 @@
+.label{
+    display: block;
+    position: relative;
+    color: hsla(0,0%,100%,.7);
+}
+.label:hover {
+    color: white;
+}
+.first .label{
+    padding: 14px 24px;
+}
+.second .label{
+    padding: 14px 50px;
+}
+.second{
+    background-color: #363e4f;
+}
+li{
+    cursor: pointer;
+}
+.fa-angle-up{
+    position: relative;
+    float: right;
+}
+.checked{
+    background-color: #2d8cf0!important;
+    color: white!important;
+}

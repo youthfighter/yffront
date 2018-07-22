@@ -38,3 +38,8 @@ body{
 .ui-inputgroup-addon{
     padding: 0.6em 0.25em!important;
 }
+/*  */
+.ui-breadcrumb{
+    background: white!important;
+    border: none!important;
+}
