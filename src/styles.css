@@ -31,3 +31,10 @@ body{
 .ui-paginator-pages{
     height: 2em!important;
 }
+/*  */
+.ui-inputtext{
+    padding: 0.6em 0.25em!important;
+}
+.ui-inputgroup-addon{
+    padding: 0.6em 0.25em!important;
+}
