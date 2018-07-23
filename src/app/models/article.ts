@@ -7,7 +7,8 @@
  * @param htmlContent 文章内容 html内容
  * @param createDate 文章创建日期
  * @param publishDate 文章发布日期
- * @param tags文章标签
+ * @param tags 文章标签
+ * @param state 文章状态
  */
 export class Article {
     id: string;
@@ -19,4 +20,5 @@ export class Article {
     createDate: number;
     publishDate: number;
     tags: string[];
+    state: string;
 }

@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { ManagementComponent } from './management.component';
 import { HomeComponent } from 'src/app/management/home/home.component';
 import { LoginComponent } from 'src/app/management/login/login.component';
+import { ArticlesListComponent } from 'src/app/management/home/articles-list/articles-list.component';
 
 export const managementRoutes: Routes = [
     {
@@ -9,12 +10,18 @@ export const managementRoutes: Routes = [
         component: ManagementComponent,
         children: [
             {
-                path: '',
+                path: 'login',
                 component: LoginComponent
             },
             {
-                path: 'home',
-                component: HomeComponent
+                path: '',
+                component: HomeComponent,
+                children: [
+                    {
+                        path: '',
+                        component: ArticlesListComponent,
+                    }
+                ]
             }
         ]
     }

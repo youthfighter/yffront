@@ -1,5 +1,5 @@
 .left{
-    position: absolute;
+    position: fixed;
     left: 0;
     width: 240px;
     top: 0;
@@ -16,8 +16,8 @@
     color: #fff;
 }
 .right{
-    height: 100%;
-    margin-left: 240px;
+    padding-left: 240px;
+    padding-top: 58px;
 }
 header{
     position: fixed;
@@ -25,4 +25,7 @@ header{
     top: 0;
     right: 0;
     z-index: 10;
+}
+.body{
+    margin: 20px 20px 20px 20px;
 }

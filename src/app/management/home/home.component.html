@@ -1,9 +1,12 @@
 <div class="left">
-  <a routerLink="/management/home" class="blog-name">YOUTH·FIGHTER</a>
+  <a routerLink="/management" class="blog-name">YOUTH·FIGHTER</a>
   <app-menus></app-menus>
 </div>
+<header>
+  <app-header></app-header>
+</header>
 <div class="right">
-  <header>
-      <app-header></app-header>
-  </header>  
+  <div class="body">
+    <router-outlet></router-outlet>
+  </div>
 </div>
