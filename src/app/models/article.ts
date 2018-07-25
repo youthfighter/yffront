@@ -20,5 +20,5 @@ export class Article {
     createDate: number;
     publishDate: number;
     tags: string[];
-    state: string;
+    state: string = "1"; //1私密 2公开
 }

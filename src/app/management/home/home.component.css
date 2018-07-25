@@ -24,7 +24,7 @@ header{
     left: 240px;
     top: 0;
     right: 0;
-    z-index: 10;
+    z-index: 200;
 }
 .body{
     margin: 20px 20px 20px 20px;

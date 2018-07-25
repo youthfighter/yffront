@@ -4,6 +4,7 @@
     padding: 10px 20px;
     display: flex;
     position: relative;
+    box-shadow: 5px 1px rgb(237, 239, 241);
 }
 .breadcrumb{
     flex: 1;

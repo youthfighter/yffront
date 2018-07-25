@@ -9,7 +9,6 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { HomeModule } from 'src/app/management/home/home.module';
 
-
 @NgModule({
   imports: [
     CommonModule,

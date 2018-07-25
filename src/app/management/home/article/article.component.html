@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-body">
+    <header>
+      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+      {{pageTitle}}
+      <button pButton type="button" label="发布文章" class="small-btn f-right" icon="fa fa-floppy-o" (click)="save()"></button>
+    </header>
+    <div class="body">
+      <div class="item">
+          <input type="text" pInputText placeholder="请输入文章标题..." class="title" [(ngModel)]="article.title">
+      </div>
+      <div class="item">
+        <app-editor [markdown]='' placeholder='开始编辑markdown文章...' (onChange)="markdownChange($event)"></app-editor>
+      </div>
+      <div class="item">
+        <p-chips [(ngModel)]="article.tags" placeholder="请输入标签，回车添加，最多可添加三个标签。" [max]="3"></p-chips>
+      </div>
+      <div class="item ctr-btn">
+          <p-radioButton name="state" value="2" label="公开" [(ngModel)]="article.state"></p-radioButton>&nbsp;&nbsp;&nbsp;&nbsp;
+          <p-radioButton name="state" value="1" label="私密" [(ngModel)]="article.state"></p-radioButton>
+          <button pButton type="button" label="发布文章" class="f-right publish-btn" icon="fa fa-floppy-o" (click)="save()"></button>
+      </div>
+    </div>  
+  </div>
+  <i class="fa fa-spinner fa-pulse fa-3x fa-fw" *ngIf="pageTitle === '编辑文章'"></i>
+</div>

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterModule, ActivatedRoute } from '@angular/router';
 import { HomeComponent } from 'src/app/management/home/home.component';
 import { homeConfig } from 'src/app/management/home/home.routes';
 import { ArticlesListComponent } from 'src/app/management/home/articles-list/articles-list.component';
@@ -14,6 +14,10 @@ import { TableModule } from 'primeng/table';
 import { PaginatorModule } from 'primeng/paginator';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ConfirmationService } from 'primeng/api';
+import { ArticleComponent } from './article/article.component';
+import { InputTextModule } from 'primeng/inputtext';
+import { ChipsModule } from 'primeng/chips';
+import { RadioButtonModule } from 'primeng/radiobutton';
 
 @NgModule({
   imports: [
@@ -24,7 +28,10 @@ import { ConfirmationService } from 'primeng/api';
     ButtonModule,
     TableModule,
     PaginatorModule,
-    ConfirmDialogModule
+    ConfirmDialogModule,
+    InputTextModule,
+    ChipsModule,
+    RadioButtonModule
   ],
   declarations: [
     HomeComponent,
@@ -32,6 +39,7 @@ import { ConfirmationService } from 'primeng/api';
     MenusComponent,
     EditorComponent,
     HeaderComponent,
+    ArticleComponent,
   ],
   providers: [
     ConfirmationService

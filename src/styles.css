@@ -44,4 +44,11 @@ body{
     border: none!important;
 }
 
-/* button */
+/* editor.md全屏显示 防遮挡 */
+.editormd-fullscreen{
+    z-index: 999;
+}
+/* chip组件 input太短*/
+.ui-chips-input-token input{
+    width: 20em!important;
+}

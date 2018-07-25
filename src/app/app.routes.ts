@@ -1,5 +1,4 @@
 import { RouterModule } from '@angular/router';
-import { BlogComponent } from 'src/app/blog/blog.component';
 
 export const AppRoutes = [
     {
