@@ -8,29 +8,14 @@ import { MenuItem } from 'primeng/api';
 })
 export class HeaderComponent implements OnInit {
   private items: MenuItem[];
-  private items2: MenuItem[];
   constructor() { }
 
   ngOnInit() {
     this.items = [
       {label:'Categories'},
       {label:'Sports'},
-      {label:'Lionel Messi', url: 'https://en.wikipedia.org/wiki/Lionel_Messi'}
+      {label:'Lionel Messi'}
     ];
-    this.items2 = [
-      {
-          label: 'TV', icon: 'fa fa-fw fa-check',
-          items: [
-              [
-                  {
-                      label: 'TV 1'
-                  },
-                  {
-                      label: 'TV 2'
-                  }
-              ]
-          ]
-      }
-  ];
   }
 }
+

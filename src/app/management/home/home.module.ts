@@ -18,6 +18,7 @@ import { ArticleComponent } from './article/article.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { ChipsModule } from 'primeng/chips';
 import { RadioButtonModule } from 'primeng/radiobutton';
+import { IndexComponent } from './index/index.component';
 
 @NgModule({
   imports: [
@@ -40,6 +41,7 @@ import { RadioButtonModule } from 'primeng/radiobutton';
     EditorComponent,
     HeaderComponent,
     ArticleComponent,
+    IndexComponent,
   ],
   providers: [
     ConfirmationService

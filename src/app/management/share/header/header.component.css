@@ -10,12 +10,13 @@
     flex: 1;
 }
 .user-info{
-    width: 200px;
+    width: 150px;
     height: 20px;
     padding: .5em;
     color: #1b1d1f;
     text-align: right;
     cursor: pointer;
+    overflow: hidden;
 }
 .user-info i{
     color: #2d8cf0;

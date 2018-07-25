@@ -11,20 +11,18 @@ import { ActivatedRoute } from '@angular/router';
 export class ArticleComponent implements OnInit {
   @ViewChild(EditorComponent)
   editormd: EditorComponent;
-  article: Article;
+  article: Article = new Article();
   pageTitle: string = '新增文章';
+  private mask: boolean = false;
 
   constructor(private activatedRoute: ActivatedRoute) { 
-    if (this.activatedRoute.snapshot.params.id) {
-      this.pageTitle = '编辑文章'
-    } else {
-      this.article = new Article();
-    }
   }
 
   ngOnInit() {
-    if (this.pageTitle === '编辑文章') {
-      
+    console.log(this.activatedRoute)
+    if (this.activatedRoute.snapshot.params.id) {
+      this.pageTitle = '编辑文章';
+      this.mask = true;
     }
   }
   markdownChange(data) {
