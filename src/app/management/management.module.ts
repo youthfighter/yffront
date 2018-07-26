@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { HomeModule } from 'src/app/management/home/home.module';
+import { UserService } from './share/header/services/userServices';
 
 @NgModule({
   imports: [
@@ -23,6 +24,7 @@ import { HomeModule } from 'src/app/management/home/home.module';
     LoginComponent,
   ],
   exports: [
-  ]
+  ],
+  providers: [UserService]
 })
 export class ManagementModule { }

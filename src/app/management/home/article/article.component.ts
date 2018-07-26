@@ -19,16 +19,16 @@ export class ArticleComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.activatedRoute)
+    //console.log(this.activatedRoute)
     if (this.activatedRoute.snapshot.params.id) {
       this.pageTitle = '编辑文章';
       this.mask = true;
     }
   }
   markdownChange(data) {
-    console.log('markdownChange', arguments);
+    //console.log('markdownChange', arguments);
   }
   save() {
-    console.log(this.editormd.getData())
+    //console.log(this.editormd.getData())
   }
 }
