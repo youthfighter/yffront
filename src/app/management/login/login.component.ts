@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../share/header/services/userServices';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,23 +12,26 @@ export class LoginComponent implements OnInit {
   username: string = '';
   password: string = '';
   code: string;
-  constructor() { }
+  constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit() {
+
   }
-  login() {
-    console.log('error');
-    this.error = '用户名密码错误!!'
-  }
-  checkInfo() {
-    if (this.username && this.password && this.code) {
-      return false;
+  async login() {
+/*     console.log('error');
+    this.error = '用户名密码错误!!' */
+    let result = await this.userService.login(this.username, this.password, this.code);
+    if (result) {
+      this.router.navigateByUrl('/management');
     } else {
-      return true;
+      this.error = '登录失败，请刷新重试!';
     }
   }
+  canLogin() {
+    return !(this.username && this.password && this.code);
+  }
   keydown(event) {
-    if (event.code === 'Enter' && !this.checkInfo()) {
+    if (event.code === 'Enter' && !this.canLogin()) {
       this.login();
     }
   }

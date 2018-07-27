@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { ArticlesListComponent } from './home/articles-list/articles-list.component';
 import { ArticleComponent } from './home/article/article.component';
 import { IndexComponent } from './home/index/index.component';
+import { LoginGuard } from './guard/loginGuard.guard';
 
 export const managementRoutes: Routes = [
     {
@@ -18,6 +19,7 @@ export const managementRoutes: Routes = [
             {
                 path: '',
                 component: HomeComponent,
+                canActivate: [LoginGuard],
                 children: [
                     {
                         path: '',
