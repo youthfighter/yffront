@@ -19,7 +19,7 @@ export class ArticleComponent implements OnInit {
   }
 
   ngOnInit() {
-    //console.log(this.activatedRoute)
+    console.log(this.activatedRoute)
     if (this.activatedRoute.snapshot.params.id) {
       this.pageTitle = '编辑文章';
       this.mask = true;

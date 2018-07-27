@@ -1,4 +1,3 @@
-import { config } from './config';
 import { MenuItem } from 'primeng/api';
 
 export class BreadcrumbService{

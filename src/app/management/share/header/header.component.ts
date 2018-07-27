@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { NavigationStart } from '@angular/router';
+import { UserService } from './services/userServices';
 
 @Component({
   selector: 'app-header',
@@ -15,7 +16,7 @@ import { NavigationStart } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   private items: MenuItem[];
-  constructor(private breadcrumbService: BreadcrumbService, private activatedRoute: ActivatedRoute, private router: Router) { }
+  constructor(private breadcrumbService: BreadcrumbService, private activatedRoute: ActivatedRoute, private router: Router, private userService: UserService) { }
 
   ngOnInit() {
     this.items = this.breadcrumbService.getMenuItem(this.router.url);
@@ -25,6 +26,11 @@ export class HeaderComponent implements OnInit {
         this.items = this.breadcrumbService.getMenuItem(event.url);
       }
     })
+  }
+  logout() {
+    localStorage.setItem('isLogin', "0");
+    this.userService.isLogin = false;
+    this.router.navigateByUrl('/management/login');
   }
 }
 

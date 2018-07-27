@@ -9,14 +9,21 @@ import { Router } from '@angular/router';
   styleUrls: ['./management.component.css']
 })
 export class ManagementComponent implements OnInit {
-
-  constructor(private userService: UserService, private router: Router) { }
+  private loading: boolean = true;
+  constructor(private userService: UserService, private router: Router) {
+   }
 
   async ngOnInit() {
-    console.log(await this.userService.checkLogin());
-    if (!await this.userService.checkLogin()) {
+    console.log(!this.userService.isLogin, !await this.userService.checkLogin())
+    if (!this.userService.isLogin && !await this.userService.checkLogin()) {
       //用户没有登录了
+      this.loading = false;
       this.router.navigateByUrl('/management/login')
+    } else {
+      this.loading = false;
+      if (this.router.url === '/management/login') {
+        this.router.navigateByUrl('/management');
+      }      
     }
   }
 

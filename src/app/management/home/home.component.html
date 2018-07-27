@@ -1,12 +1,17 @@
-<div class="left">
-  <a routerLink="/management" class="blog-name">YOUTH·FIGHTER</a>
-  <app-menus></app-menus>
-</div>
-<header>
-  <app-header></app-header>
-</header>
-<div class="right">
-  <div class="body">
-    <router-outlet></router-outlet>
+<div>
+  <div class="left">
+    <a routerLink="/management" class="blog-name">YOUTH·FIGHTER</a>
+    <app-menus></app-menus>
+  </div>
+  <header>
+    <app-header></app-header>
+  </header>
+  <div class="right">
+    <div class="body">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>
+<!-- <div *ngIf="!isLogin" class="loading">
+  <i class="fa fa-spinner fa-pulse fa-3x fa-fw" ></i>
+</div> -->
