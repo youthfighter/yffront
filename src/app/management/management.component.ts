@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EventEmitter } from 'events';
-import { UserService } from './share/header/services/userServices';
 import { Router } from '@angular/router';
+import { UserService } from './share/header/services/user.service';
 
 @Component({
   selector: 'app-management',
@@ -14,17 +14,13 @@ export class ManagementComponent implements OnInit {
    }
 
   async ngOnInit() {
-    console.log(!this.userService.isLogin, !await this.userService.checkLogin())
-    if (!this.userService.isLogin && !await this.userService.checkLogin()) {
+    //console.log('this.userService.isLogin', this.userService.isLogin);
+    this.loading = false;
+/*     if (!this.userService.isLogin) {
       //用户没有登录了
-      this.loading = false;
-      this.router.navigateByUrl('/management/login')
-    } else {
-      this.loading = false;
-      if (this.router.url === '/management/login') {
-        this.router.navigateByUrl('/management');
-      }      
+      await this.userService.checkLogin();
     }
+    this.loading = false; */
   }
 
 }

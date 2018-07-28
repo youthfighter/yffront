@@ -5,7 +5,8 @@ import { LoginComponent } from './login/login.component';
 import { ArticlesListComponent } from './home/articles-list/articles-list.component';
 import { ArticleComponent } from './home/article/article.component';
 import { IndexComponent } from './home/index/index.component';
-import { LoginGuard } from './guard/loginGuard.guard';
+import { LoginGuard, CantLoginGuard } from './guard/loginGuard.guard';
+import { UnsaveGuard } from './guard/unsave.guard';
 
 export const managementRoutes: Routes = [
     {
@@ -14,7 +15,8 @@ export const managementRoutes: Routes = [
         children: [
             {
                 path: 'login',
-                component: LoginComponent
+                component: LoginComponent,
+                canActivate: [CantLoginGuard]
             },
             {
                 path: '',
@@ -31,11 +33,12 @@ export const managementRoutes: Routes = [
                     },
                     {
                         path: 'article',
-                        component: ArticleComponent
+                        component: ArticleComponent,
                     },
                     {
                         path: 'article/:id',
-                        component: ArticleComponent
+                        component: ArticleComponent,
+                        canDeactivate: [UnsaveGuard]
                     }
                 ]
             }

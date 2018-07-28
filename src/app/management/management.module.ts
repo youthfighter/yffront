@@ -8,7 +8,9 @@ import { LoginComponent } from './login/login.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { HomeModule } from 'src/app/management/home/home.module';
-import { UserService } from './share/header/services/userServices';
+import { UserService } from './share/header/services/user.service';
+import { UnsaveGuard } from './guard/unsave.guard';
+import { LoginGuard, CantLoginGuard } from './guard/loginGuard.guard';
 
 @NgModule({
   imports: [
@@ -25,6 +27,11 @@ import { UserService } from './share/header/services/userServices';
   ],
   exports: [
   ],
-  providers: [UserService]
+  providers: [
+    UserService,
+    UnsaveGuard,
+    LoginGuard,
+    CantLoginGuard
+  ]
 })
 export class ManagementModule { }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+import { menusConfig } from './menus.config'
 
 @Component({
   selector: 'app-menus',
@@ -7,36 +9,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenusComponent implements OnInit {
   menus: any[];
-  curSelected: any;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
-    this.menus = [
-      { label: '内容管理', 
-        children: [
-          { label: '文章管理', link: '/management/article' },
-          { label: '留言管理', link: '/management/articles' }
-        ]
-      },
-      { label: '内容管理', 
-      children: [
-        { label: '文章管理', link: '/management/article/1' },
-        { label: '留言管理', link: '/management/article/2' }
-      ]
-    }
-    ]
+    this.menus = menusConfig;
+    this.refreshMenus(this.router.url);
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        event as NavigationEnd;
+        this.refreshMenus(event.url);
+      }
+    })
   }
-  firstClick(ele) {
-    ele.checked = !ele.checked;
+  /* 刷新菜单开关 */  
+  refreshMenus(path: string) {
+    this.menus.forEach(first => {
+      if (first.children) {
+        first.children.forEach(second => {
+          if (second.link === path) {
+            first.checked = true;
+            second.checked = true;
+          } else {
+            second.checked = false;
+          }
+        })
+      }
+    })
   }
-  secondClick(event: Event, ele) {
-    event.stopPropagation();
-    if (this.curSelected) {
-      this.curSelected.checked = false;
-    }
-    this.curSelected = ele;
-    ele.checked = true;
-    
-  }
-
 }

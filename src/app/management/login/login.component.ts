@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../share/header/services/userServices';
 import { Router } from '@angular/router';
+import { UserService } from '../share/header/services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
   async login() {
 /*     console.log('error');
     this.error = '用户名密码错误!!' */
+    console.log('login')
     let result = await this.userService.login(this.username, this.password, this.code);
     if (result) {
       this.router.navigateByUrl('/management');

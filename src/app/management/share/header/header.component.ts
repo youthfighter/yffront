@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 import { NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { NavigationStart } from '@angular/router';
-import { UserService } from './services/userServices';
+import { UserService } from './services/user.service';
 
 @Component({
   selector: 'app-header',

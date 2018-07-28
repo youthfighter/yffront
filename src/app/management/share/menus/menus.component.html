@@ -1,12 +1,12 @@
 <ul class="first">
-  <li *ngFor="let first of menus" (click)="firstClick(first)">
+  <li *ngFor="let first of menus" (click)="first.checked=!first.checked">
     <div class="label">
       <i class="fa fa-bars" aria-hidden="true"></i>&nbsp;
       {{first.label}}
       <i class="fa fa-angle-up" aria-hidden="true"></i>
     </div>
     <ul class="second" *ngIf="first.checked">
-      <li *ngFor="let second of first.children" (click)="secondClick($event, second)" [ngClass]="{'checked': second.checked}">
+      <li *ngFor="let second of first.children" (click)="$event.stopPropagation();" [ngClass]="{'checked': second.checked}">
           <a class="label" [routerLink]="second.link">{{second.label}}</a>
       </li>
     </ul>
