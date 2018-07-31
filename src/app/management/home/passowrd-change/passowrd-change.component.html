@@ -1,0 +1,32 @@
+
+<div class="card">
+    <div class="card-body">
+        <header>
+        <i class="fa fa-key" aria-hidden="true"></i>
+            {{pageTitle}}
+        </header>
+        <div class="form-group">
+            <div class="form-item">
+                <span>用户密码:</span>
+                <input type="text" pInputText placeholder="当前密码" class="psw-input" [(ngModel)]="oldPassword" (keyup)="cantSave()" [disabled]="saving"> 
+            </div>
+            <div class="form-item">
+                <span>新密码:</span>
+                <input type="text" pInputText placeholder="当前密码" class="psw-input" [(ngModel)]="newPassword" (keyup)="cantSave()" [disabled]="saving"> 
+            </div>
+            <div class="form-item">
+                <span>确认密码:</span>
+                <input type="text" pInputText placeholder="当前密码" class="psw-input" [(ngModel)]="confirmPassword" (keyup)="cantSave()" [disabled]="saving"> 
+            </div>
+            <div class="form-submit">
+                <p class="err-tip">{{error}}</p>
+                <button pButton type="button" *ngIf="!saving" label="确认修改" class="login-btn" [disabled]="cantSave()" (click)="onSave($event)"></button>
+                <button pButton type="button" *ngIf="saving" icon="fa fa-spinner fa-spin" label="确认修改" class="login-btn" disabled="disabled"></button>
+            </div>
+            <div class="form-submit">
+                    <p class="err-tip">{{error}}</p>
+                    <button pButton type="button"  label="确认修改" class="login-btn" (click)="show($event)"></button>
+                </div>
+        </div> 
+    </div>
+</div>      

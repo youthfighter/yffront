@@ -19,6 +19,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ChipsModule } from 'primeng/chips';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { IndexComponent } from './index/index.component';
+import { PassowrdChangeComponent } from './passowrd-change/passowrd-change.component';
 
 @NgModule({
   imports: [
@@ -42,6 +43,7 @@ import { IndexComponent } from './index/index.component';
     HeaderComponent,
     ArticleComponent,
     IndexComponent,
+    PassowrdChangeComponent,
   ],
   providers: [
     ConfirmationService

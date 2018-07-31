@@ -8,10 +8,11 @@ import { LoginComponent } from './login/login.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { HomeModule } from 'src/app/management/home/home.module';
-import { UserService } from './share/header/services/user.service';
 import { UnsaveGuard } from './guard/unsave.guard';
 import { LoginGuard, CantLoginGuard } from './guard/loginGuard.guard';
-
+import { UserService } from './share/header/services/user.service';
+import { GrowlModule } from 'primeng/growl';
+import { MessageService } from 'primeng/components/common/messageservice';
 @NgModule({
   imports: [
     CommonModule,
@@ -19,7 +20,8 @@ import { LoginGuard, CantLoginGuard } from './guard/loginGuard.guard';
     InputTextModule,
     ButtonModule,
     FormsModule,
-    HomeModule
+    HomeModule,
+    GrowlModule
   ],
   declarations: [
     ManagementComponent,
@@ -31,7 +33,8 @@ import { LoginGuard, CantLoginGuard } from './guard/loginGuard.guard';
     UserService,
     UnsaveGuard,
     LoginGuard,
-    CantLoginGuard
+    CantLoginGuard,
+    MessageService
   ]
 })
 export class ManagementModule { }

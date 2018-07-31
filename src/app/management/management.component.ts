@@ -11,6 +11,7 @@ import { UserService } from './share/header/services/user.service';
 export class ManagementComponent implements OnInit {
   private loading: boolean = true;
   constructor(private userService: UserService, private router: Router) {
+    console.log('ManagementComponent');
    }
 
   async ngOnInit() {
@@ -22,5 +23,4 @@ export class ManagementComponent implements OnInit {
     }
     this.loading = false; */
   }
-
 }

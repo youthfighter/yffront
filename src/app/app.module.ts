@@ -7,6 +7,7 @@ import { AppRoutes } from 'src/app/app.routes';
 import { BlogModule } from 'src/app/blog/blog.module';
 import { ManagementModule } from './management/management.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Http } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RouterModule.forRoot(AppRoutes),
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

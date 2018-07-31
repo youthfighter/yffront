@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from '../../../../models/user';
+/* import { Http } from '@angular/http'; */
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ export class UserService {
 
   private user: User;
     
-    constructor(private router: Router) {
+    constructor(private router: Router/* , private http: Http */) {
 
     }
     get isLogin() {
@@ -28,7 +29,6 @@ export class UserService {
     login(username: string, password: string, code: string) {
         //登录方法 登录成功后将基本信息放入user变量
         return new Promise((resolve, reject) => {
-            console.log(1)
             setTimeout(()=>{
                 this.user = new User();
                 this.user.id = '1';
@@ -42,7 +42,6 @@ export class UserService {
     //登出
     logout() {
         //置空user
-        console.log('ok')
         this.user = null;
         //todo 服务器删除对应session;
         this.router.navigateByUrl('/management/login');
@@ -89,5 +88,16 @@ export class UserService {
         await this.refreshUser();
         if (this.user) return true
         else return false;
+    }
+    //修改密码
+    async changePassword(oldPwd: string, newPwd: string): Promise<boolean> {
+/*         try {
+            await this.http.post('/api/v1/user/password', `oldPwd=${oldPwd}&newPwd=${newPwd}`).toPromise();
+        } catch(e) {
+            return false;
+        }
+        return true; */
+        return Promise.resolve(true);
+        
     }
 }

@@ -7,6 +7,7 @@ import { ArticleComponent } from './home/article/article.component';
 import { IndexComponent } from './home/index/index.component';
 import { LoginGuard, CantLoginGuard } from './guard/loginGuard.guard';
 import { UnsaveGuard } from './guard/unsave.guard';
+import { PassowrdChangeComponent } from './home/passowrd-change/passowrd-change.component';
 
 export const managementRoutes: Routes = [
     {
@@ -39,6 +40,10 @@ export const managementRoutes: Routes = [
                         path: 'article/:id',
                         component: ArticleComponent,
                         canDeactivate: [UnsaveGuard]
+                    },
+                    {
+                        path: 'password',
+                        component: PassowrdChangeComponent
                     }
                 ]
             }

@@ -20,7 +20,6 @@ export class CantLoginGuard implements CanActivate {
     constructor(private userService: UserService, private router: Router){ }
     async canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
         let res = await this.userService.getLoginState();
-        console.log('guard', res);
         if (res) {
             this.router.navigateByUrl('/management');
         } else {
